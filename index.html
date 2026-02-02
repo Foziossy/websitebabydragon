@@ -166,16 +166,25 @@
         }
 
         /* Greeting Section */
-        .greeting-section {
-            max-width: 900px;
-            margin: -80px auto 100px;
-            padding: 60px 50px;
-            background: var(--white);
-            border-radius: 40px;
-            box-shadow: 0 20px 60px rgba(251, 111, 146, 0.15);
-            position: relative;
-            z-index: 3;
-        }
+        ..greeting-section {
+    max-width: 900px;
+    margin: -80px auto 100px;
+    padding: 60px 50px;
+    
+    /* 1. Ganti background putih dengan gambar */
+    background-image: url('bggreeting.jpg'); 
+    background-size: cover;
+    background-position: center;
+    
+    /* 2. Tambahkan lapisan warna transparan di atas gambar agar teks tetap terbaca */
+    background-color: rgba(255, 255, 255, 0.6); 
+    background-blend-mode: overlay; /* Ini akan mencampur warna putih transparan dengan foto */
+
+    border-radius: 40px;
+    box-shadow: 0 20px 60px rgba(251, 111, 146, 0.15);
+    position: relative;
+    z-index: 3;
+}
 
         .greeting-section h3 {
             font-family: 'Playfair Display', serif;
@@ -444,8 +453,8 @@
         <div class="popup-content">
             <span class="popup-emoji">🎂</span>
             <h1>Happy Birthday!</h1>
-            <p>To the most amazing Baby Dragon in the world! 🐉💕</p>
-            <button class="close-popup-btn" onclick="closePopup()">Let's Celebrate! 🎉</button>
+            <p>to my lovely Baby Dragon💕</p>
+            <button class="close-popup-btn" onclick="closePopup()">Klik di sini ya bebe 😘</button>
         </div>
     </div>
 
@@ -455,21 +464,21 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-dragon">🐉</div>
-        <h2>HBD Baby Dragon</h2>
-        <p class="hero-subtitle">Today We Celebrate You!</p>
+        <h2>Happy Birthday Baby Dragon🥳</h2>
+        <p class="hero-subtitle">Scroll down to see what's coming!</p>
     </section>
 
     <!-- Greeting Section -->
     <section class="greeting-section">
         <h3>My Dearest Baby Dragon,</h3>
         <p class="greeting-text">
-            Happy Birthday to the person who makes every day brighter and more magical! 🌟 I can't believe how lucky I am to have you in my life. You are my fierce dragon who protects my heart, my gentle soul who understands me completely, and my best friend who shares every adventure with me.
+            Happy Birthday to the person who makes every day brighter and more magical! I can't believe how lucky I am to have you in my life. You are my fierce dragon who protects my heart, my gentle soul who understands me completely, and my best friend who shares every adventure with me.
         </p>
         <p class="greeting-text">
-            This past year with you has been filled with so many beautiful memories - from our late-night conversations to our spontaneous adventures, from quiet moments together to the loudest laughter. You've shown me what true love and partnership really means, and I am grateful for every single moment.
+            This past year with you has been filled with so many beautiful memories, from our random conversations to our spontaneous adventures, from quiet moments together to the loudest laughter. You've shown me what true love and partnership really means, and I am grateful for every single moment.
         </p>
         <p class="greeting-text">
-            On this special day, I want you to know that you are extraordinary. Your strength inspires me, your kindness touches everyone around you, and your smile lights up my entire world. You deserve all the happiness, all the love, and all the wonderful things life has to offer.
+            On this special day, I want you to know that you are extraordinary. Your strength inspires me, your kindness touches my little heart, and your smile lights up my entire world. You deserve all the happiness, all the love, and all the wonderful things life has to offer.
         </p>
         <p class="greeting-text">
             Here's to another year of amazing memories, wild adventures, cozy moments, and endless love. May this birthday be as incredible as you are, filled with joy, surprises, and everything your heart desires. Thank you for being you, for loving me, and for making life so wonderfully sweet.
@@ -477,56 +486,64 @@
         <p class="greeting-text">
             I love you more than words can express, my beautiful Baby Dragon. Today and always, you are my everything. 💕🐉
         </p>
-        <p class="greeting-signature">Forever Yours, With All My Love ❤️</p>
+        <p class="greeting-signature">Forever yours❤️</p>
     </section>
 
     <!-- Photo Collage Section -->
     <section class="collage-section">
-        <h2 class="collage-title">Our Beautiful Memories 📸</h2>
-        <div class="photo-collage">
-            <div class="collage-item">
-                <div class="photo-placeholder">📷</div>
-                <div class="photo-label">Our First Adventure Together</div>
-            </div>
-            <div class="collage-item">
-                <div class="photo-placeholder">🌅</div>
-                <div class="photo-label">Sunset Memories</div>
-            </div>
-            <div class="collage-item">
-                <div class="photo-placeholder">😄</div>
-                <div class="photo-label">Laughing Until We Cry</div>
-            </div>
-            <div class="collage-item">
-                <div class="photo-placeholder">🎉</div>
-                <div class="photo-label">Celebrating Together</div>
-            </div>
-            <div class="collage-item">
-                <div class="photo-placeholder">🌸</div>
-                <div class="photo-label">Beautiful Moments</div>
-            </div>
-            <div class="collage-item">
-                <div class="photo-placeholder">💑</div>
-                <div class="photo-label">Just Us Two</div>
-            </div>
-            <div class="collage-item">
-                <div class="photo-placeholder">🌟</div>
-                <div class="photo-label">Making Dreams Come True</div>
-            </div>
-            <div class="collage-item">
-                <div class="photo-placeholder">❤️</div>
-                <div class="photo-label">Love & Laughter</div>
-            </div>
-            <div class="collage-item">
-                <div class="photo-placeholder">🎈</div>
-                <div class="photo-label">Special Celebrations</div>
-            </div>
+    <h2 class="collage-title">Throwback 📸</h2>
+    <div class="photo-collage">
+        <div class="collage-item">
+            <img src="handsign.jpg" alt="Ulen Sentalu" style="width:100%; height:100%; object-fit:cover;">
+            <div class="photo-label">Ulen Sentalu</div>
         </div>
-    </section>
+
+        <div class="collage-item">
+            <img src="pengilon.jpg" alt="Sunset" style="width:100%; height:100%; object-fit:cover;">
+            <div class="photo-label">Sunrise Memories</div>
+        </div>
+
+        <div class="collage-item">
+            <img src="burung.jpg" alt="Laughing" style="width:100%; height:100%; object-fit:cover;">
+            <div class="photo-label">Gembira Loka Zoo</div>
+        </div>
+
+        <div class="collage-item">
+            <img src="kimetsu.jpg" alt="Celebration" style="width:100%; height:100%; object-fit:cover;">
+            <div class="photo-label">Ngewibu</div>
+        </div>
+
+        <div class="collage-item">
+            <img src="[permen.jpg]" alt="Beautiful" style="width:100%; height:100%; object-fit:cover;">
+            <div class="photo-label">Beautiful Moments</div>
+        </div>
+
+        <div class="collage-item">
+            <img src="[makanbang.jpg]" alt="Us" style="width:100%; height:100%; object-fit:cover;">
+            <div class="photo-label">Just Us Two</div>
+        </div>
+
+        <div class="collage-item">
+            <img src="[maguwo.jpg]" alt="Dreams" style="width:100%; height:100%; object-fit:cover;">
+            <div class="photo-label">hariharimaguwo</div>
+        </div>
+
+        <div class="collage-item">
+            <img src="[ulen.jpg]" alt="Love" style="width:100%; height:100%; object-fit:cover;">
+            <div class="photo-label">atas bawah cantik</div>
+        </div>
+
+        <div class="collage-item">
+            <img src="[weding.jpg]" alt="Special" style="width:100%; height:100%; object-fit:cover;">
+            <div class="photo-label">Wen yaah</div>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
         <p>Made with endless love for my Baby Dragon 🐉💕</p>
-        <p>Happy Birthday 2026 🎂✨</p>
+        <p>Ossy</p>
     </footer>
 
     <script>
